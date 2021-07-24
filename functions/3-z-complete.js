@@ -17,6 +17,9 @@ const airtable = new Airtable({ apiKey: process.env.AIRTABLE_API_KEY })
         }
       }
       return {
+            headers: {
+      'Access-Control-Allow-Origin': '*',
+    },
         statusCode: 200,
         body: JSON.stringify(product),
       }
@@ -36,6 +39,9 @@ const airtable = new Airtable({ apiKey: process.env.AIRTABLE_API_KEY })
       return { id, name, url, price }
     })
     return {
+          headers: {
+      'Access-Control-Allow-Origin': '*',
+    },
       statusCode: 200,
       body: JSON.stringify(products),
     }
