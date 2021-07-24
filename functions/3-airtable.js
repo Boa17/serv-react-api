@@ -17,6 +17,10 @@ try {
   return {id,name,url,price,featured,colors,company,description,category,shipping}
  })
   return {
+    headers: {
+      'Access-Control-Allow-Origin': '*',
+    },
+    
  statusCode: 200,
   body: JSON.stringify(products),
  }
